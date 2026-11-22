@@ -192,12 +192,17 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center top; /* Focuses more on clothing */
+            object-position: center center; /* Standard focus */
             transition: transform 0.5s ease;
         }
 
         .product-card:hover .product-img {
             transform: scale(1.05);
+        }
+
+        /* Special class for specific products to focus only on clothing at the bottom */
+        .product-img.focus-bottom {
+            object-position: center bottom;
         }
 
         .product-info {
@@ -238,30 +243,53 @@
             opacity: 0.9;
         }
 
-        .about-section {
+        .bio-box {
+            background: var(--bg-card);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
             margin-bottom: 50px;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
             text-align: left;
-            padding: 10px;
         }
 
-        .about-section h2 {
-            margin: 0 0 15px 0;
-            font-size: 1.5rem;
+        .bio-box:hover {
+            transform: translateY(-3px);
+            border-color: var(--primary);
+            box-shadow: 0 5px 20px rgba(168, 85, 247, 0.2);
+        }
+
+        .bio-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+        }
+
+        .bio-box h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.3rem;
             color: var(--primary);
             text-transform: uppercase;
             letter-spacing: 2px;
         }
 
-        .about-section p {
+        .bio-box p {
             margin: 0;
-            font-size: 1.1rem;
-            line-height: 1.6;
+            font-size: 0.95rem;
+            line-height: 1.5;
             color: #cbd5e1;
         }
 
         .contact-section {
             text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding-top: 30px;
             margin-bottom: 30px;
         }
@@ -373,7 +401,7 @@
             <!-- Product 8 -->
             <div class="product-card">
                 <div class="product-img-wrapper">
-                    <img src="https://raw.githubusercontent.com/phypesiam-hash/phype.online/main/E00BAEA6-A48F-454C-83D3-975164F98427.JPG" alt="Product 8" class="product-img">
+                    <img src="https://raw.githubusercontent.com/phypesiam-hash/phype.online/main/E00BAEA6-A48F-454C-83D3-975164F98427.JPG" alt="Product 8" class="product-img focus-bottom">
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">Exclusive Graphic Drop</h3>
@@ -385,7 +413,7 @@
             <!-- Product 9 -->
             <div class="product-card">
                 <div class="product-img-wrapper">
-                    <img src="https://raw.githubusercontent.com/phypesiam-hash/phype.online/main/A9A61C4C-25A7-4D92-9C74-662ABBC4C064.JPG" alt="Product 9" class="product-img">
+                    <img src="https://raw.githubusercontent.com/phypesiam-hash/phype.online/main/A9A61C4C-25A7-4D92-9C74-662ABBC4C064.JPG" alt="Product 9" class="product-img focus-bottom">
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">Relaxed Fit Heritage Denim</h3>
@@ -395,7 +423,7 @@
             </div>
         </div>
 
-        <div class="about-section">
+        <div class="bio-box">
             <h2>About Us</h2>
             <p>We believe in quality, not quantity. Elevated everyday essentials & curated drops. Nationwide delivery | DM to order 📥</p>
         </div>
