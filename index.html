@@ -192,6 +192,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center top; /* Focuses more on clothing */
             transition: transform 0.5s ease;
         }
 
@@ -237,48 +238,24 @@
             opacity: 0.9;
         }
 
-        .bio-box {
-            background: var(--bg-card);
-            padding: 25px;
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        .about-section {
             margin-bottom: 50px;
-            backdrop-filter: blur(10px);
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
             text-align: left;
+            padding: 10px;
         }
 
-        .bio-box:hover {
-            transform: translateY(-3px);
-            border-color: var(--primary);
-            box-shadow: 0 5px 20px rgba(168, 85, 247, 0.2);
-        }
-
-        .bio-box::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: linear-gradient(to bottom, var(--primary), var(--secondary));
-        }
-
-        .bio-box h2 {
-            margin: 0 0 10px 0;
-            font-size: 1.3rem;
+        .about-section h2 {
+            margin: 0 0 15px 0;
+            font-size: 1.5rem;
             color: var(--primary);
             text-transform: uppercase;
             letter-spacing: 2px;
         }
 
-        .bio-box p {
+        .about-section p {
             margin: 0;
-            font-size: 0.95rem;
-            line-height: 1.5;
+            font-size: 1.1rem;
+            line-height: 1.6;
             color: #cbd5e1;
         }
 
@@ -369,30 +346,6 @@
                 </div>
             </div>
 
-            <!-- Product 2 -->
-            <div class="product-card">
-                <div class="product-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1781197643439-f67da10a4375?q=80&w=1527&auto=format&fit=crop" alt="Product 2" class="product-img">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">Thermal Streetwear Set</h3>
-                    <p class="product-desc">Relaxed oversized fit designed to deliver an elevated, effortless cold-weather aesthetic.</p>
-                    <a href="https://wa.me/message/6REUONJAMT6KK1" class="order-btn">Order via WhatsApp</a>
-                </div>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="product-card">
-                <div class="product-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1542272604-787c96357357?q=80&w=1000&auto=format&fit=crop" alt="Essential Rigid Denim" class="product-img">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">Essential Rigid Denim</h3>
-                    <p class="product-desc">Crafted from durable heavyweight cotton designed to mold to your movement over time.</p>
-                    <a href="https://wa.me/message/6REUONJAMT6KK1" class="order-btn">Order via WhatsApp</a>
-                </div>
-            </div>
-
             <!-- Product 4 -->
             <div class="product-card">
                 <div class="product-img-wrapper">
@@ -413,18 +366,6 @@
                 <div class="product-info">
                     <h3 class="product-title">Raw Indigo Denim Jacket</h3>
                     <p class="product-desc">Uncompromised quality in rigid denim, built to develop unique fade patterns with wear.</p>
-                    <a href="https://wa.me/message/6REUONJAMT6KK1" class="order-btn">Order via WhatsApp</a>
-                </div>
-            </div>
-
-            <!-- Product 7 -->
-            <div class="product-card">
-                <div class="product-img-wrapper">
-                    <img src="https://raw.githubusercontent.com/phypesiam-hash/phype.online/main/IMG_1487.jpg" alt="Product 7" class="product-img">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">Urban Minimalist Hoodie</h3>
-                    <p class="product-desc">Clean lines and heavyweight fabric offer a sophisticated approach to streetwear layering.</p>
                     <a href="https://wa.me/message/6REUONJAMT6KK1" class="order-btn">Order via WhatsApp</a>
                 </div>
             </div>
@@ -454,7 +395,7 @@
             </div>
         </div>
 
-        <div class="bio-box">
+        <div class="about-section">
             <h2>About Us</h2>
             <p>We believe in quality, not quantity. Elevated everyday essentials & curated drops. Nationwide delivery | DM to order 📥</p>
         </div>
