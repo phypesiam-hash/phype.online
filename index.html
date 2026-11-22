@@ -60,14 +60,34 @@
             padding: 10px;
         }
 
+        .welcome-box {
+            display: inline-block;
+            background: rgba(236, 72, 153, 0.1);
+            border: 1px solid rgba(236, 72, 153, 0.3);
+            padding: 8px 20px;
+            border-radius: 50px;
+            margin-bottom: 15px;
+            box-shadow: 0 0 15px rgba(236, 72, 153, 0.2);
+        }
+
         .welcome-tag {
             font-size: 0.9rem;
             text-transform: uppercase;
-            letter-spacing: 5px;
-            color: var(--secondary);
-            margin-bottom: 10px;
-            display: block;
+            letter-spacing: 4px;
+            color: #ffffff;
             font-weight: 700;
+        }
+
+        .title-container {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            max-height: 200px;
+            overflow-y: auto;
+            margin-top: 10px;
         }
 
         .hero h1 {
@@ -77,14 +97,13 @@
             font-weight: 800;
             letter-spacing: 3px;
             text-transform: uppercase;
-            text-shadow: 0 10px 20px rgba(0,0,0,0.5);
-            word-wrap: break-word;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.5);
         }
 
         .services-header {
             text-align: left;
             margin-bottom: 30px;
-            margin-top: 20px;
+            margin-top: 40px;
         }
 
         .services-header h2 {
@@ -112,7 +131,7 @@
 
         .feature-card {
             background: var(--bg-card);
-            padding: 20px;
+            padding: 25px;
             border-radius: 15px;
             border: 1px solid rgba(255, 255, 255, 0.05);
             transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
@@ -150,6 +169,7 @@
             overflow: hidden;
             transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
             box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: left;
         }
 
         .bio-box:hover {
@@ -184,7 +204,7 @@
         }
 
         .contact-section {
-            text-align: left;
+            text-align: center;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding-top: 30px;
             margin-bottom: 30px;
@@ -200,7 +220,7 @@
 
         .social-icons {
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             gap: 25px;
         }
 
@@ -224,8 +244,12 @@
 
     <div class="main-container">
         <div class="hero">
-            <span class="welcome-tag">Welcome to our services</span>
-            <h1>PHYPE.ONLINE</h1>
+            <div class="welcome-box">
+                <span class="welcome-tag">Welcome to our services</span>
+            </div>
+            <div class="title-container">
+                <h1>PHYPE.ONLINE</h1>
+            </div>
         </div>
 
         <div class="services-header">
@@ -245,18 +269,6 @@
             <div class="feature-card">
                 <h3>Easy Ordering</h3>
                 <p>Simple and seamless direct messaging process to secure your desired drops hassle-free.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Verified Authenticity</h3>
-                <p>Every product is guaranteed genuine, ensuring complete peace of mind with your purchase.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Dedicated Support</h3>
-                <p>Responsive customer assistance ready to help you with inquiries and order updates smoothly.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Exclusive Drops</h3>
-                <p>Be the first to access limited-edition releases and special curated collections regularly.</p>
             </div>
         </div>
 
