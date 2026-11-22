@@ -4,52 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHype.online</title>
+    <link rel="icon" href="1792187713783.JPG">
     <style>
         body {
             margin: 0;
-            padding: 0;
+            padding: 40px;
             font-family: 'Helvetica Neue', Arial, sans-serif;
             background: linear-gradient(135deg, #0a0a0a, #380a3a);
             color: #ffffff;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            text-align: center;
+            justify-content: flex-start;
+            align-items: flex-start;
+            box-sizing: border-box;
         }
-        .container {
-            max-width: 600px;
-            padding: 20px;
-        }
-        .logo {
-            max-width: 150px;
-            height: auto;
-            margin-bottom: 20px;
+        .header-area {
+            margin-bottom: 40px;
+            text-align: left;
         }
         h2 {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             color: #aaaaaa;
-            font-weight: 300;
+            font-weight: 400;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-bottom: 10px;
+            margin: 0 0 5px 0;
         }
         h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: 700;
-            letter-spacing: 4px;
-            margin-bottom: 20px;
+            letter-spacing: 3px;
+            margin: 0;
+        }
+        .bio-section {
+            margin-bottom: 50px;
+            text-align: left;
+            max-width: 600px;
+        }
+        .bio-label {
+            font-size: 0.9rem;
+            color: #ff00ff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
         }
         p {
-            font-size: 1.2rem;
-            color: #cccccc;
-            line-height: 1.5;
-            max-width: 500px;
-            margin: 0 auto 40px auto;
+            font-size: 1.3rem;
+            color: #ffffff;
+            line-height: 1.6;
+            margin: 0;
+            font-weight: 300;
+        }
+        .contact-section {
+            text-align: left;
+            width: 100%;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
         }
         .contact-section h3 {
-            font-size: 2rem;
+            font-size: 1.5rem;
             color: #ffffff;
             margin-bottom: 20px;
             letter-spacing: 2px;
@@ -57,13 +73,12 @@
         }
         .social-links {
             display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 30px;
         }
         .social-links a img {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             transition: transform 0.3s;
         }
         .social-links a img:hover {
@@ -72,23 +87,31 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="1792187713783.JPG" alt="Logo" class="logo">
+
+    <div class="header-area">
         <h2>Welcome to</h2>
         <h1>PHype.online</h1>
+    </div>
+
+    <div class="bio-section">
+        <span class="bio-label">Bio</span>
         <p>We believe in quality, not quantity. Elevated everyday essentials & curated drops. Nationwide delivery | DM to order 📥</p>
-        
-        <div class="contact-section">
-            <h3>Contact Us</h3>
-            <div class="social-links">
-                <a href="https://www.facebook.com/share/193qpdQNgv/" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook Page">
-                </a>
-                <a href="https://www.instagram.com/phype_1?gwpx=MWY1NWR1ODBrazQwaw==" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
-                </a>
-            </div>
+    </div>
+    
+    <div class="contact-section">
+        <h3>Contact Us</h3>
+        <div class="social-links">
+            <a href="https://www.facebook.com/share/193qpdQNgv/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook Page">
+            </a>
+            <a href="https://www.instagram.com/phype_1?gwpx=MWY1NWR1ODBrazQwaw==" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+            </a>
+            <a href="https://wa.me/message/6REUONJAMT6KK1" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+            </a>
         </div>
     </div>
+
 </body>
 </html>
