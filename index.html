@@ -2,384 +2,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHype.online</title>
-    <link rel="icon" href="https://raw.githubusercontent.com/phypesiam-hash/phype.online/main/1792187713783.JPG">
-    <style>
-        :root {
-            --primary: #a855f7;
-            --secondary: #ec4899;
-            --bg-dark: #0a0512;
-            --bg-card: rgba(255, 255, 255, 0.03);
-            --text-main: #ffffff;
-            --text-sub: #94a3b8;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background: radial-gradient(circle at top right, #1a0b36, var(--bg-dark));
-            color: var(--text-main);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        header {
-            width: 100%;
-            max-width: 1000px;
-            padding: 30px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-sizing: border-box;
-        }
-
-        .brand-name {
-            font-size: 1.8rem;
-            font-weight: 800;
-            letter-spacing: 1.5px;
-            background: linear-gradient(45deg, #fff, var(--primary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-transform: uppercase;
-        }
-
-        .main-container {
-            width: 100%;
-            max-width: 900px;
-            padding: 20px 20px;
-            box-sizing: border-box;
-        }
-
-        .hero {
-            text-align: center;
-            margin: 10px 0 30px 0;
-            padding: 5px;
-        }
-
-        .welcome-box {
-            display: inline-block;
-            background: rgba(236, 72, 153, 0.1);
-            border: 1px solid rgba(236, 72, 153, 0.3);
-            padding: 6px 16px;
-            border-radius: 50px;
-            margin-bottom: 10px;
-            box-shadow: 0 0 10px rgba(236, 72, 153, 0.15);
-        }
-
-        .welcome-tag {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: #ffffff;
-            font-weight: 700;
-        }
-
-        .title-container-small {
-            display: inline-block;
-            background: var(--bg-card);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 10px 25px;
-            border-radius: 12px;
-            backdrop-filter: blur(5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            margin-top: 5px;
-        }
-
-        .title-container-small h1 {
-            font-size: 1.5rem;
-            color: var(--text-main);
-            margin: 0;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .services-header {
-            text-align: left;
-            margin-bottom: 30px;
-            margin-top: 30px;
-        }
-
-        .services-header h2 {
-            font-size: 1.8rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            background: linear-gradient(45deg, #fff, var(--primary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin: 0 0 10px 0;
-        }
-
-        .services-header p {
-            color: var(--text-sub);
-            font-size: 1rem;
-            margin: 0;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 15px;
-            margin-bottom: 40px;
-        }
-
-        .feature-card {
-            background: var(--bg-card);
-            padding: 25px;
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-            backdrop-filter: blur(5px);
-        }
-
-        .feature-card:hover {
-            transform: translateY(-3px);
-            border-color: var(--primary);
-            box-shadow: 0 5px 20px rgba(168, 85, 247, 0.2);
-        }
-
-        .feature-card h3 {
-            margin: 0 0 10px 0;
-            color: var(--text-main);
-            font-size: 1.15rem;
-            letter-spacing: 1px;
-        }
-
-        .feature-card p {
-            margin: 0;
-            color: var(--text-sub);
-            font-size: 0.9rem;
-            line-height: 1.4;
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
-        .product-card {
-            background: var(--bg-card);
-            border-radius: 18px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-            backdrop-filter: blur(5px);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-            box-shadow: 0 10px 35px rgba(168, 85, 247, 0.3);
-        }
-
-        .product-img-wrapper {
-            width: 100%;
-            height: 350px;
-            overflow: hidden;
-            background-color: #0a0512;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .product-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensures area is filled nicely without extreme distortion */
-            object-position: center top; /* Focuses on the top portion of the portrait images */
-            transition: transform 0.5s ease;
-        }
-
-        .product-card:hover .product-img {
-            transform: scale(1.05);
-        }
-
-        .product-info {
-            padding: 24px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .product-title {
-            font-size: 1.35rem;
-            font-weight: 700;
-            margin: 0 0 12px 0;
-            color: var(--text-main);
-        }
-
-        .product-desc {
-            font-size: 1rem;
-            color: var(--text-sub);
-            margin: 0 0 24px 0;
-            line-height: 1.5;
-        }
-
-        .order-btn {
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            color: white;
-            text-align: center;
-            padding: 14px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1rem;
-            transition: opacity 0.3s ease;
-            margin-top: auto;
-        }
-
-        .order-btn:hover {
-            opacity: 0.9;
-        }
-
-        .about-section {
-            margin-bottom: 40px;
-            text-align: left;
-            padding: 10px;
-        }
-
-        .about-section h2 {
-            margin: 0 0 15px 0;
-            font-size: 1.5rem;
-            color: var(--primary);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .about-section p {
-            margin: 0;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #cbd5e1;
-        }
-
-        .contact-section {
-            text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 30px;
-            margin-bottom: 20px;
-        }
-
-        .contact-section h3 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--text-main);
-        }
-
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-        }
-
-        .icon-link img {
-            width: 38px;
-            height: 38px;
-            transition: transform 0.3s ease, filter 0.3s ease;
-        }
-
-        .icon-link img:hover {
-            transform: scale(1.15) translateY(-3px);
-            filter: drop-shadow(0 0 10px var(--primary));
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PHYPE.ONLINE | Wear Your Identity</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#f7f6f2;color:#151b25;line-height:1.6}
+a{text-decoration:none;color:inherit}
+header{position:sticky;top:0;z-index:10;background:#f7f6f2;border-bottom:1px solid #ddd}
+.nav{max-width:1200px;margin:auto;padding:16px 5%;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.logo{font-size:25px;font-weight:900;letter-spacing:4px}
+nav{display:flex;gap:16px;flex-wrap:wrap}
+nav a{font-size:11px;letter-spacing:1px}
+.hero{min-height:450px;background:#151b25;color:white;display:flex;align-items:center;padding:70px 7%}
+.hero-inner{max-width:1050px;margin:auto;width:100%}
+.hero small{letter-spacing:4px;color:#a9c6df}
+.hero h1{font-size:clamp(48px,9vw,95px);line-height:1.05;margin:22px 0}
+.hero p{letter-spacing:3px;color:#ddd}
+.button{display:inline-block;margin-top:25px;padding:14px 24px;background:white;color:#151b25;font-size:11px;font-weight:bold;letter-spacing:2px}
+.section{max-width:1200px;margin:auto;padding:70px 5%}
+.heading{text-align:center;margin-bottom:35px}
+.heading small{color:#456b91;letter-spacing:3px;font-size:11px}
+.heading h2{font-size:clamp(30px,5vw,42px);margin-top:8px}
+.heading p{color:#777;font-size:14px;margin-top:6px}
+.collection-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.collection-card{background:white;border:1px solid #e5e2dc;cursor:pointer}
+.collection-card img{width:100%;height:330px;object-fit:cover;display:block}
+.collection-info{padding:18px}
+.collection-info h3{font-size:19px}
+.collection-info p{font-size:13px;color:#777}
+.explore{font-size:11px;color:#456b91;letter-spacing:2px;margin-top:10px}
+.product-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.product{background:white;border:1px solid #e5e2dc;padding-bottom:20px}
+.product img{width:100%;height:390px;object-fit:contain;display:block}
+.product h3{padding:12px 18px 0}
+.order{display:inline-block;margin:12px 18px;background:#151b25;color:white;padding:12px 18px;font-size:11px;letter-spacing:1px}
+.own-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.own-grid img{width:100%;height:380px;object-fit:cover}
+.back{padding:11px 18px;border:1px solid #151b25;background:transparent;cursor:pointer;margin-bottom:25px}
+.hidden{display:none!important}
+.about{background:#eceae4;text-align:center;padding:75px 7%}
+.about h2{font-size:40px;margin:10px 0 20px}
+.about p{color:#555;margin:7px}
+.contact{text-align:center}
+.social-links{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:25px}
+.social{display:inline-block;background:#151b25;color:white;padding:13px 22px;font-size:12px}
+footer{background:#151b25;color:white;text-align:center;padding:30px 15px;font-size:12px}
+footer p{color:#ccc;margin-top:7px}
+@media(max-width:700px){
+.nav{flex-direction:column}
+nav{justify-content:center;gap:12px}
+.collection-grid{grid-template-columns:1fr}
+.product-grid,.own-grid{grid-template-columns:1fr}
+.collection-card img{height:350px}
+.product img,.own-grid img{height:350px}
+.section{padding:55px 6%}
+}
+</style>
 </head>
 <body>
 
-    <header>
-        <div class="brand-name">PHype</div>
-    </header>
+<header>
+<div class="nav">
+<a class="logo" href="#home">PHYPE.</a>
+<nav>
+<a href="#home">Home</a>
+<a href="#collections">Collections</a>
+<a href="#own">Own Collection</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
 
-    <div class="main-container">
-        <div class="hero">
-            <div class="welcome-box">
-                <span class="welcome-tag">Welcome to our services</span>
-            </div>
-            <br>
-            <div class="title-container-small">
-                <h1>PHYPE.ONLINE</h1>
-            </div>
-        </div>
+<section class="hero" id="home">
+<div class="hero-inner">
+<small>PHYPE.ONLINE — CURATED ESSENTIALS</small>
+<h1>WEAR YOUR<br>IDENTITY.</h1>
+<p>LESS NOISE. MORE STYLE.</p>
+<a class="button" href="#collections">EXPLORE COLLECTIONS</a>
+</div>
+</section>
 
-        <div class="services-header">
-            <h2>Why Choose Us</h2>
-            <p>Experience excellence and reliability in every interaction</p>
-        </div>
+<section class="section" id="collections">
+<div class="heading">
+<small>FIND YOUR OWN STANDARD</small>
+<h2>Our Collections</h2>
+<p>Elevated everyday essentials.</p>
+</div>
+<div class="collection-grid">
+<div class="collection-card" onclick="showCollection('hoodies')">
+<img src="209117.jpg" alt="Hoodie Collection">
+<div class="collection-info"><h3>Hoodie Collection</h3><p>Comfort meets everyday style.</p><div class="explore">EXPLORE COLLECTION →</div></div>
+</div>
+<div class="collection-card" onclick="showCollection('sweatshirts')">
+<img src="209119.jpg" alt="Sweatshirt Collection">
+<div class="collection-info"><h3>Sweatshirt Collection</h3><p>Clean looks. Timeless essentials.</p><div class="explore">EXPLORE COLLECTION →</div></div>
+</div>
+<div class="collection-card" onclick="showCollection('pants')">
+<img src="209118.jpg" alt="Baggy Pants Collection">
+<div class="collection-info"><h3>Baggy Pants Collection</h3><p>Relaxed fit. Strong identity.</p><div class="explore">EXPLORE COLLECTION →</div></div>
+</div>
+</div>
+</section>
 
-        <div class="features-grid">
-            <div class="feature-card">
-                <h3>Premium Quality</h3>
-                <p>Curated items ensuring the highest standards and exclusivity for your everyday needs.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Easy Ordering</h3>
-                <p>Simple and seamless direct messaging process to secure your desired drops hassle-free.</p>
-            </div>
-        </div>
+<section class="section hidden" id="hoodies">
+<button class="back" onclick="hideCollections()">← BACK TO COLLECTIONS</button>
+<div class="heading"><small>PHYPE ESSENTIALS</small><h2>Hoodie Collection</h2></div>
+<div class="product-grid">
+<div class="product">
+<img src="209117.jpg" alt="Black Hoodie">
+<h3>Classic Hoodie</h3>
+<a class="order" href="https://wa.me/message/6REUONJAMT6KK1" target="_blank">ORDER ON WHATSAPP ↗</a>
+</div>
+</div>
+</section>
 
-        <div class="services-header">
-            <h2>Our Products</h2>
-            <p>Explore our exclusive curated drops</p>
-        </div>
+<section class="section hidden" id="sweatshirts">
+<button class="back" onclick="hideCollections()">← BACK TO COLLECTIONS</button>
+<div class="heading"><small>EVERYDAY COMFORT</small><h2>Sweatshirt Collection</h2></div>
+<div class="product-grid">
+<div class="product">
+<img src="209119.jpg" alt="Sweatshirts">
+<h3>Classic Sweatshirts</h3>
+<a class="order" href="https://wa.me/message/6REUONJAMT6KK1" target="_blank">ORDER ON WHATSAPP ↗</a>
+</div>
+</div>
+</section>
 
-        <div class="products-grid">
-            <!-- Product 1: Curated Streetwear Drop -->
-            <div class="product-card">
-                <div class="product-img-wrapper">
-                    <img src="https://raw.githubusercontent.com/phypesiam-hash/phype.online/main/Picsart_26-11-23_02-38-43-779.jpg" alt="Curated Streetwear Drop" class="product-img">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">Curated Streetwear Drop</h3>
-                    <p class="product-desc">Exclusive seasonal release crafted for elevated everyday styling.</p>
-                    <a href="https://wa.me/message/6REUONJAMT6KK1" class="order-btn">Order via WhatsApp</a>
-                </div>
-            </div>
+<section class="section hidden" id="pants">
+<button class="back" onclick="hideCollections()">← BACK TO COLLECTIONS</button>
+<div class="heading"><small>RELAXED FIT</small><h2>Baggy Pants Collection</h2></div>
+<div class="product-grid">
+<div class="product">
+<img src="209118.jpg" alt="Baggy Denim Jeans">
+<h3>Classic Baggy Denim</h3>
+<a class="order" href="https://wa.me/message/6REUONJAMT6KK1" target="_blank">ORDER ON WHATSAPP ↗</a>
+</div>
+</div>
+</section>
 
-            <!-- Product 2: Essential Streetwear Aesthetic -->
-            <div class="product-card">
-                <div class="product-img-wrapper">
-                    <img src="https://raw.githubusercontent.com/phypesiam-hash/phype.online/main/D79714D2-4486-49B1-A54E-13C8911FC604.jpg" alt="Essential Streetwear Aesthetic" class="product-img">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">Essential Streetwear Aesthetic</h3>
-                    <p class="product-desc">Versatile piece engineered for effortless layering and durability.</p>
-                    <a href="https://wa.me/message/6REUONJAMT6KK1" class="order-btn">Order via WhatsApp</a>
-                </div>
-            </div>
-        </div>
+<section class="section" id="own">
+<div class="heading">
+<small>PERSONAL PICKS</small>
+<h2>Own Collection</h2>
+<p>A little more about our identity.</p>
+</div>
+<div class="own-grid">
+<img src="Picsart_26-11-23_02-38-43-779.jpg" alt="Own Collection 1">
+<img src="Picsart_26-11-17_15-10-24-996.jpg" alt="Own Collection 2">
+<img src="IMG_5241.jpg" alt="Own Collection 3">
+<img src="D79714D2-4486-49B1-A54E-13C8911FC604.jpg" alt="Own Collection 4">
+</div>
+</section>
 
-        <div class="about-section">
-            <h2>About Us</h2>
-            <p>We believe in quality, not quantity. Elevated everyday essentials & curated drops. Nationwide delivery | DM to order 📥</p>
-        </div>
-        
-        <div class="contact-section">
-            <h3>Contact Us</h3>
-            <div class="social-icons">
-                <a href="https://www.facebook.com/share/184852924/" target="_blank" class="icon-link">
-                    <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook">
-                </a>
-                <a href="https://www.instagram.com/phype_1?gwx=MWY1NWR0ODBrazQww==" target="_blank" class="icon-link">
-                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
-                </a>
-                <a href="https://wa.me/message/6REUONJAMT6KK1" target="_blank" class="icon-link">
-                    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-                </a>
-            </div>
-        </div>
-    </div>
+<section class="about" id="about">
+<small>THE PHYPE STORY</small>
+<h2>About PHYPE</h2>
+<p><strong>PY Hype</strong></p>
+<p>We believe in quality, not quantity.</p>
+<p>Elevated everyday essentials &amp; curated drops.</p>
+<p>Nationwide delivery | DM to order 📩</p>
+</section>
 
+<section class="section contact" id="contact">
+<div class="heading">
+<small>GET IN TOUCH</small>
+<h2>Contact Us</h2>
+<p>Have a question or want to place an order? Reach out to us.</p>
+</div>
+<div class="social-links">
+<a class="social" href="https://wa.me/message/6REUONJAMT6KK1" target="_blank">WHATSAPP</a>
+<a class="social" href="https://www.instagram.com/phype_1?bqrl=MWY1NWR1ODBrazQwaw==" target="_blank">INSTAGRAM</a>
+<a class="social" href="https://www.facebook.com/share/1BRRvtnjDr/" target="_blank">FACEBOOK</a>
+</div>
+</section>
+
+<footer>
+<div class="logo">PHYPE.</div>
+<p>Wear Your Identity. Less Noise. More Style.</p>
+<p>© 2026 PHYPE.ONLINE. All Rights Reserved.</p>
+</footer>
+
+<script>
+function showCollection(id){
+document.querySelectorAll('#hoodies,#sweatshirts,#pants').forEach(s=>s.classList.add('hidden'));
+document.getElementById(id).classList.remove('hidden');
+['collections','own','about','contact'].forEach(s=>document.getElementById(s).classList.add('hidden'));
+window.scrollTo({top:0,behavior:'smooth'});
+}
+function hideCollections(){
+document.querySelectorAll('#hoodies,#sweatshirts,#pants').forEach(s=>s.classList.add('hidden'));
+['collections','own','about','contact'].forEach(s=>document.getElementById(s).classList.remove('hidden'));
+document.getElementById('collections').scrollIntoView({behavior:'smooth'});
+}
+</script>
 </body>
 </html>
