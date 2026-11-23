@@ -8,48 +8,49 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;background:#f7f6f2;color:#151b25;line-height:1.6}
+body{font-family:Arial,sans-serif;background:#101827;color:#f5f3ed;line-height:1.6}
 a{text-decoration:none;color:inherit}
-header{position:sticky;top:0;z-index:10;background:#f7f6f2;border-bottom:1px solid #ddd}
+header{position:sticky;top:0;z-index:10;background:#101827;border-bottom:1px solid #29364a}
 .nav{max-width:1200px;margin:auto;padding:16px 5%;display:flex;align-items:center;justify-content:space-between;gap:15px}
-.logo{font-size:25px;font-weight:900;letter-spacing:4px}
+.logo{font-size:25px;font-weight:900;letter-spacing:4px;color:white}
 nav{display:flex;gap:16px;flex-wrap:wrap}
-nav a{font-size:11px;letter-spacing:1px}
-.hero{min-height:450px;background:#151b25;color:white;display:flex;align-items:center;padding:70px 7%}
+nav a{font-size:11px;letter-spacing:1px;color:#e5e9f0}
+.hero{min-height:450px;background:linear-gradient(120deg,#101827,#1b2c46);display:flex;align-items:center;padding:70px 7%}
 .hero-inner{max-width:1050px;margin:auto;width:100%}
-.hero small{letter-spacing:4px;color:#a9c6df}
-.hero h1{font-size:clamp(48px,9vw,95px);line-height:1.05;margin:22px 0}
-.hero p{letter-spacing:3px;color:#ddd}
-.button{display:inline-block;margin-top:25px;padding:14px 24px;background:white;color:#151b25;font-size:11px;font-weight:bold;letter-spacing:2px}
+.hero small{letter-spacing:4px;color:#8db9e8}
+.hero h1{font-size:clamp(48px,9vw,95px);line-height:1.05;margin:22px 0;color:#fff}
+.hero p{letter-spacing:3px;color:#d7deea}
+.button{display:inline-block;margin-top:25px;padding:14px 24px;background:#dce9f7;color:#101827;font-size:11px;font-weight:bold;letter-spacing:2px}
 .section{max-width:1200px;margin:auto;padding:70px 5%}
 .heading{text-align:center;margin-bottom:35px}
-.heading small{color:#456b91;letter-spacing:3px;font-size:11px}
-.heading h2{font-size:clamp(30px,5vw,42px);margin-top:8px}
-.heading p{color:#777;font-size:14px;margin-top:6px}
+.heading small{color:#8db9e8;letter-spacing:3px;font-size:11px}
+.heading h2{font-size:clamp(30px,5vw,42px);margin-top:8px;color:white}
+.heading p{color:#b8c1cf;font-size:14px;margin-top:6px}
 .collection-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.collection-card{background:white;border:1px solid #e5e2dc;cursor:pointer}
+.collection-card{background:#f5f3ed;color:#152033;border:1px solid #d8dce3;cursor:pointer}
 .collection-card img{width:100%;height:330px;object-fit:cover;display:block}
 .collection-info{padding:18px}
 .collection-info h3{font-size:19px}
-.collection-info p{font-size:13px;color:#777}
-.explore{font-size:11px;color:#456b91;letter-spacing:2px;margin-top:10px}
+.collection-info p{font-size:13px;color:#596273}
+.explore{font-size:11px;color:#315f91;letter-spacing:2px;margin-top:10px}
 .product-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
-.product{background:white;border:1px solid #e5e2dc;padding-bottom:20px}
+.product{background:#f5f3ed;color:#152033;border:1px solid #d8dce3;padding-bottom:20px}
 .product img{width:100%;height:390px;object-fit:contain;display:block}
 .product h3{padding:12px 18px 0}
-.order{display:inline-block;margin:12px 18px;background:#151b25;color:white;padding:12px 18px;font-size:11px;letter-spacing:1px}
+.order{display:inline-block;margin:12px 18px;background:#183d65;color:white;padding:12px 18px;font-size:11px;letter-spacing:1px}
 .own-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-.own-grid img{width:100%;height:380px;object-fit:cover}
-.back{padding:11px 18px;border:1px solid #151b25;background:transparent;cursor:pointer;margin-bottom:25px}
+.own-grid img{width:100%;height:380px;object-fit:cover;border:1px solid #34445a}
+.back{padding:11px 18px;border:1px solid #a9c6e5;background:transparent;color:white;cursor:pointer;margin-bottom:25px}
 .hidden{display:none!important}
-.about{background:#eceae4;text-align:center;padding:75px 7%}
-.about h2{font-size:40px;margin:10px 0 20px}
-.about p{color:#555;margin:7px}
+.about{background:#1b2a40;text-align:center;padding:75px 7%}
+.about h2{font-size:40px;margin:10px 0 20px;color:white}
+.about p{color:#d0d8e4;margin:7px}
 .contact{text-align:center}
 .social-links{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:25px}
-.social{display:inline-block;background:#151b25;color:white;padding:13px 22px;font-size:12px}
-footer{background:#151b25;color:white;text-align:center;padding:30px 15px;font-size:12px}
-footer p{color:#ccc;margin-top:7px}
+.social{display:inline-flex;align-items:center;gap:9px;background:#203b5b;color:white;padding:13px 22px;font-size:12px;border:1px solid #45678d}
+.social svg{width:18px;height:18px;fill:currentColor}
+footer{background:#0a111d;color:white;text-align:center;padding:30px 15px;font-size:12px}
+footer p{color:#aeb8c7;margin-top:7px}
 @media(max-width:700px){
 .nav{flex-direction:column}
 nav{justify-content:center;gap:12px}
@@ -91,25 +92,43 @@ nav{justify-content:center;gap:12px}
 <h2>Our Collections</h2>
 <p>Elevated everyday essentials.</p>
 </div>
+
 <div class="collection-grid">
 <div class="collection-card" onclick="showCollection('hoodies')">
 <img src="209117.jpg" alt="Hoodie Collection">
-<div class="collection-info"><h3>Hoodie Collection</h3><p>Comfort meets everyday style.</p><div class="explore">EXPLORE COLLECTION →</div></div>
+<div class="collection-info">
+<h3>Hoodie Collection</h3>
+<p>Comfort meets everyday style.</p>
+<div class="explore">EXPLORE COLLECTION →</div>
 </div>
+</div>
+
 <div class="collection-card" onclick="showCollection('sweatshirts')">
 <img src="209119.jpg" alt="Sweatshirt Collection">
-<div class="collection-info"><h3>Sweatshirt Collection</h3><p>Clean looks. Timeless essentials.</p><div class="explore">EXPLORE COLLECTION →</div></div>
+<div class="collection-info">
+<h3>Sweatshirt Collection</h3>
+<p>Clean looks. Timeless essentials.</p>
+<div class="explore">EXPLORE COLLECTION →</div>
 </div>
+</div>
+
 <div class="collection-card" onclick="showCollection('pants')">
 <img src="209118.jpg" alt="Baggy Pants Collection">
-<div class="collection-info"><h3>Baggy Pants Collection</h3><p>Relaxed fit. Strong identity.</p><div class="explore">EXPLORE COLLECTION →</div></div>
+<div class="collection-info">
+<h3>Baggy Pants Collection</h3>
+<p>Relaxed fit. Strong identity.</p>
+<div class="explore">EXPLORE COLLECTION →</div>
+</div>
 </div>
 </div>
 </section>
 
 <section class="section hidden" id="hoodies">
 <button class="back" onclick="hideCollections()">← BACK TO COLLECTIONS</button>
-<div class="heading"><small>PHYPE ESSENTIALS</small><h2>Hoodie Collection</h2></div>
+<div class="heading">
+<small>PHYPE ESSENTIALS</small>
+<h2>Hoodie Collection</h2>
+</div>
 <div class="product-grid">
 <div class="product">
 <img src="209117.jpg" alt="Black Hoodie">
@@ -121,7 +140,10 @@ nav{justify-content:center;gap:12px}
 
 <section class="section hidden" id="sweatshirts">
 <button class="back" onclick="hideCollections()">← BACK TO COLLECTIONS</button>
-<div class="heading"><small>EVERYDAY COMFORT</small><h2>Sweatshirt Collection</h2></div>
+<div class="heading">
+<small>EVERYDAY COMFORT</small>
+<h2>Sweatshirt Collection</h2>
+</div>
 <div class="product-grid">
 <div class="product">
 <img src="209119.jpg" alt="Sweatshirts">
@@ -133,7 +155,10 @@ nav{justify-content:center;gap:12px}
 
 <section class="section hidden" id="pants">
 <button class="back" onclick="hideCollections()">← BACK TO COLLECTIONS</button>
-<div class="heading"><small>RELAXED FIT</small><h2>Baggy Pants Collection</h2></div>
+<div class="heading">
+<small>RELAXED FIT</small>
+<h2>Baggy Pants Collection</h2>
+</div>
 <div class="product-grid">
 <div class="product">
 <img src="209118.jpg" alt="Baggy Denim Jeans">
@@ -172,10 +197,22 @@ nav{justify-content:center;gap:12px}
 <h2>Contact Us</h2>
 <p>Have a question or want to place an order? Reach out to us.</p>
 </div>
+
 <div class="social-links">
-<a class="social" href="https://wa.me/message/6REUONJAMT6KK1" target="_blank">WHATSAPP</a>
-<a class="social" href="https://www.instagram.com/phype_1?bqrl=MWY1NWR1ODBrazQwaw==" target="_blank">INSTAGRAM</a>
-<a class="social" href="https://www.facebook.com/share/1BRRvtnjDr/" target="_blank">FACEBOOK</a>
+<a class="social" href="https://wa.me/message/6REUONJAMT6KK1" target="_blank">
+<svg viewBox="0 0 24 24"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.2 1.6 6L0 24l6.4-1.7a11.8 11.8 0 0 0 5.7 1.5h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.2-3.5-8.5ZM12.1 21.8a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.4 4.7Zm5.4-7.3c-.3-.2-1.7-.9-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-.9 1.1-.2.2-.4.2-.7.1-.3-.2-1.2-.4-2.3-1.4-.9-.8-1.5-1.7-1.7-2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.6-.9-2.1-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.5s1.1 2.8 1.3 3c.1.2 2.2 3.4 5.4 4.8.8.3 1.4.5 1.9.6.8.3 1.5.2 2 .1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.5-.4Z"/></svg>
+WHATSAPP
+</a>
+
+<a class="social" href="https://www.instagram.com/phype_1?bqrl=MWY1NWR1ODBrazQwaw==" target="_blank">
+<svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.5-3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Z"/></svg>
+INSTAGRAM
+</a>
+
+<a class="social" href="https://www.facebook.com/share/1BRRvtnjDr/" target="_blank">
+<svg viewBox="0 0 24 24"><path d="M13.5 22v-9h3l.5-3.5h-3.5V7.3c0-1 .3-1.7 1.8-1.7h1.9V2.5c-.9-.1-1.8-.2-2.7-.2-2.7 0-4.6 1.7-4.6 4.8v2.4H7V13h2.9v9h3.6Z"/></svg>
+FACEBOOK
+</a>
 </div>
 </section>
 
@@ -192,11 +229,13 @@ document.getElementById(id).classList.remove('hidden');
 ['collections','own','about','contact'].forEach(s=>document.getElementById(s).classList.add('hidden'));
 window.scrollTo({top:0,behavior:'smooth'});
 }
+
 function hideCollections(){
 document.querySelectorAll('#hoodies,#sweatshirts,#pants').forEach(s=>s.classList.add('hidden'));
 ['collections','own','about','contact'].forEach(s=>document.getElementById(s).classList.remove('hidden'));
 document.getElementById('collections').scrollIntoView({behavior:'smooth'});
 }
 </script>
+
 </body>
 </html>
